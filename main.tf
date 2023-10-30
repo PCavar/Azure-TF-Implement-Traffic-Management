@@ -24,7 +24,6 @@ resource "azurerm_windows_virtual_machine" "win_vm0" {
   }
 }
 
-
 resource "azurerm_virtual_machine_extension" "powershell_script" {
   name                 = "EnableRouting"
   virtual_machine_id   = azurerm_windows_virtual_machine.win_vm0.id

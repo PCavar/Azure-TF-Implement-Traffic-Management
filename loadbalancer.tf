@@ -1,4 +1,4 @@
-//
+// Public IP for loadbalancer
 resource "azurerm_public_ip" "public_ip_lb" {
   name                = var.loadbalancer_config["lb1"].pub_ip_lb_name
   resource_group_name = azurerm_resource_group.main_rg_1.name

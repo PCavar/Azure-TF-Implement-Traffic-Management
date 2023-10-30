@@ -1,5 +1,4 @@
 // Creating private,public ips and NICs
-
 resource "azurerm_public_ip" "pub_vm0" {
   name                = var.vm0_pub_ip_config["vm0_pub"].name
   resource_group_name = azurerm_resource_group.main_rg.name
