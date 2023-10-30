@@ -20,6 +20,12 @@ Steps to proivision:
    
     8.  Running "terraform apply -out ./run-this-deployment.tfplan" applies the deployment/changes proposed in "./run-this-deployment.tfplan".
 
+Added two scripts.
+The EnableRouting script is for the vm0 route-table to work as vm0 will act as a "router" in this case. Routing traffic from vnet2 to vnet3. This is needed because vnet2 and vnet3 are not peered as peering is non-transitive.
+
+Use Ip Flow Verify or connection troubleshoot for example to check the hops and routes the vms take.
+
+The WebserverIIS is to install IIS on the virtual machines so they have something to listen on via HTTP on port 80. If the vms are not listening on port 80 the tcp-health probe will fail.
 
 There are many more commands, for starters this will be more than enough!
 
