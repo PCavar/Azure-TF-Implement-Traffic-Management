@@ -29,5 +29,8 @@ The WebserverIIS is to install IIS on the virtual machines so they have somethin
 
 There are many more commands, for starters this will be more than enough!
 
+If running on windows, a good visualizer is Graphviz however many people encounter an error.
+(HTML code is displaying and not a resource visualization). Try:
+```terraform graph -type=plan | dot -Tpng -o graph.png```
 
 Have fun!
